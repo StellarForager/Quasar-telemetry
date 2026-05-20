@@ -1,7 +1,16 @@
 {
-  "TimeIssue": "2025-10-01T12:00:00+08:00",
-  "TimeExpire": "2026-09-30T23:59:59+08:00",
-  "Policy": {
-    "Enabled": true
-  }
+  "TimeIssue": "2026-05-20T00:00:00+08:00",
+  "TimeExpire": "2026-07-31T23:59:59+08:00",
+  "Enabled": true,
+  "MinVersion": "7.0.1",
+  "BlacklistedAccounts": [
+    "MTMzNzkxMDEyNDI=",
+    "MTUwMDkxODcyNDk=",
+    "MTUxOTE4NjM4ODc=",
+    "MTUyMjk5MTk3NTQ=",
+    "MjMwMDkyMDA4ODE=",
+    "MjMwMDkyMDEwOTk=",
+    "MjMwMDkyMDExMDA=",
+    "MjMwMDkyMDExMDE="
+  ]
 }

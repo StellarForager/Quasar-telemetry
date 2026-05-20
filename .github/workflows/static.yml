@@ -31,12 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Sign Configs
+        env:
+          TELEMETRY_PRI_KEY: ${{ secrets.TELEMETRY_PRI_KEY }}
+        run: go run signer.go
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
