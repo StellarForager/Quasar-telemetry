@@ -11,7 +11,8 @@ import (
 func main() {
 	flag.Parse()
 
-	privKey, err := base64.StdEncoding.DecodeString(os.Getenv("TELEMETRY_PRI_KEY"))
+	privKey, err := base64.StdEncoding.DecodeString(
+		os.Getenv("TELEMETRY_PRI_KEY"))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
@@ -23,7 +24,7 @@ func main() {
 	}
 	err = os.WriteFile("config.json.sig", []byte(
 		base64.StdEncoding.EncodeToString(
-			ed25519.Sign(ed25519.PrivateKey(privKey), configBytes))), 0644)
+			ed25519.Sign(ed25519.PrivateKey(privKey), configBytes))+"\n"), 0644)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
