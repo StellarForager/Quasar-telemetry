@@ -1,7 +1,7 @@
 {
-  "TimeExpire": "2026-07-31T23:59:59+08:00",
+  "TimeExpire": "2027-01-31T23:59:59+08:00",
   "Enabled": true,
-  "MinVersion": "7.0.1",
+  "MinVersion": "7.1.1",
   "BlacklistedAccounts": [
     "MTMzNzkxMDEyNDI=",
     "MTUwMDkxODcyNDk=",
